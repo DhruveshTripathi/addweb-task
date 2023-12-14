@@ -1,0 +1,23 @@
+addweb_task.add_short_url:
+  path: '/add-short-url'
+  defaults:
+    _form: '\Drupal\addweb_task\Form\ShortlinkForm'
+    _title: 'Add Short URL'
+  requirements:
+    _permission: 'access content'
+
+addweb_task.short_url_list:
+  path: '/short-url-list'
+  defaults:
+    _controller: '\Drupal\addweb_task\Controller\ShortUrlListController::content'
+    _title: 'Short URL List'
+  requirements:
+    _permission: 'access content'
+
+addweb_task.short_link_info:
+  path: '/view-details/{shortcode}'
+  defaults:
+    _controller: '\Drupal\addweb_task\Controller\ShortLinkInfoController::content'
+    _title: 'Short Link Info'
+  requirements:
+    _permission: 'access content'

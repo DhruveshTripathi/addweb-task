@@ -1,0 +1,5 @@
+name: 'Addweb Task'
+type: module
+description: 'Provides a custom form for adding data and convert into short links. Also list data and do operations.'
+core_version_requirement: ^8 || ^9 || ^10
+package: Custom

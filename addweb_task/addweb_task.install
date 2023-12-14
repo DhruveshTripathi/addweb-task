@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function addweb_task_schema() {
+  $schema['shortlink_data'] = [
+    'description' => 'Stores data for the shortlink form module.',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'description' => 'The primary key of the table.',
+      ],
+      'url' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'The original URL.',
+      ],
+      'shortlink' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'The generated short link.',
+      ],
+      'created' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'description' => 'Timestamp of when the record was created.',
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  return $schema;
+}
